@@ -1,0 +1,155 @@
+<style>
+    .navbar-brand {
+        font-size: 24px !important;
+        font-weight: bold !important;
+        color: #fff; /* Білий колір тексту */
+    }
+
+    .navbar {
+        background-color: #1a1d24;
+    }
+
+    .nav-link {
+    border-radius: 20px !important; /* Завкругленість кнопок */
+    display: flex; /* Встановлюємо flex контейнер */
+    align-items: center; /* Вирівнюємо елементи по вертикалі */
+    justify-content: center; /* Центруємо текст горизонтально */
+    padding: 8px 30px !important; /* Додаємо відступи */
+}
+
+    .nav-link.active {
+        background-color: #657ee4;
+        border-color: #657ee4;
+    }
+
+    .nav-link.active,
+    .nav-link.active:hover {
+        color: #fff;
+    }
+
+    .block {
+        margin-top: 50px !important;
+        padding: 20px !important;
+
+        border-radius: 10px !important;
+        background-color: #2e323c; /* Колір фону блоку */
+    }
+
+    .block img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .block p {
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: #fff; /* Білий колір тексту */
+    }
+
+    body {
+        background-color: #262a33; /* Колір фону сторінки */
+        color: #fff; /* Білий колір тексту */
+    }
+
+    .btn-primary {
+        background-color: #657ee4 !important; /* Змінений колір кнопки */
+        color: #fff; /* Білий колір тексту */
+    }
+
+    select.form-control {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-color: #fff; /* Фоновий колір */
+        color: #000; /* Колір тексту */
+        padding: 5px; /* Відступи */
+        border: 1px solid #ccc; /* Рамка */
+        border-radius: 5px; /* Закруглені кути */
+        width: 100%; /* Ширина */
+    }
+
+    select.form-control option:checked {
+        background-color: #657ee4;
+        color: #fff; /* Колір тексту */
+    }
+
+    select.form-control option:hover {
+        background-color: #657ee4;
+        color: #fff; /* Колір тексту */
+    }
+
+    .custom-file-upload {
+        display: inline-block;
+        padding: 10px 20px;
+        cursor: pointer;
+        background-color: #657ee4; /* колір кнопки */
+        color: #fff; /* колір тексту */
+        border-radius: 5px; /* заокруглені кути */
+    }
+
+    .custom-file-upload:hover {
+        background-color: #4056b4; /* колір кнопки при наведенні */
+    }
+
+    #file-name-placeholder {
+        margin-left: 10px; /* відступ для імені файлу */
+        color: #fff; /* Білий колір тексту */
+    }
+
+
+
+
+.person-info-container {
+    display: flex; /* Встановлюємо flex контейнер */
+    align-items: center; /* Вирівнюємо елементи по вертикалі */
+    padding: 20px; /* Зовнішні відступи */
+    background-color: #2e323c; /* Колір фону блоку */
+    border-radius: 10px; /* Закруглені кути */
+}
+
+.person-info-container {
+    display: flex; /* Встановлюємо flex контейнер */
+    align-items: center; /* Вирівнюємо елементи по вертикалі */
+    padding: 20px; /* Зовнішні відступи */
+    background-color: #2e323c; /* Колір фону блоку */
+    border-radius: 10px; /* Закруглені кути */
+    margin-bottom: 20px; /* Відступ між блоками */
+}
+
+.image-container {
+    flex: 0 0 auto; /* Запобігаємо розтягненню контейнера */
+    margin-right: 20px; /* Відступ між фото та текстом */
+}
+
+.image-container img {
+    width: 150px; /* Ширина фото */
+    height: 150px; /* Висота фото */
+    border-radius: 50%; /* Заокругленість кутів, робимо круглими */
+    object-fit: cover; /* Забезпечуємо збереження пропорцій */
+    object-position: center; /* Центруємо зображення в контейнері */
+}
+
+
+.text-info {
+    flex: 1; /* Займає весь вільний простір по горизонталі */
+    padding-left: 20px; /* Відступ для тексту */
+    color: #fff !important; /* Колір тексту */
+}
+
+.text-info p {
+    margin: 0; /* Забираємо зовнішні відступи у параграфів */
+}
+
+/* Стилі для розділювальної лінії між блоками person-info */
+.person-info-container:not(:last-child) {
+    border-bottom: 1px solid #fff; /* Лінія з білого кольору */
+    padding-bottom: 20px; /* Відступ знизу */
+}
+
+</style>
+<script>
+    function updateFileName(input) {
+        var fileName = input.files[0].name; // Отримуємо ім'я файлу
+        document.getElementById('file-name-placeholder').innerText = fileName; // Змінюємо текст на ім'я файлу
+    }
+</script>

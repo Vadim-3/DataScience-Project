@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            {% for image in img%}
+                <div class="block">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="{{ image.image.url }}" alt="Uploaded Image" class="img-fluid">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="predicted-class">
+                                <p><strong>Предбачений клас:</strong></p>
+                                <p>{{ image.get_image_predicted_class_display }}</p>
+                            </div>
+                            <div class="true-class">
+                                <p><strong>Справжній клас:</strong></p>
+                                <p>{{ image.get_image_predicted_class_display }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

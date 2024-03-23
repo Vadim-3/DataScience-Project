@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block title %}Page Title{% endblock %}
+{% block content %}
+{% load static %}
+<main>
+
+    <div class="person-info-container block-info">
+        <div class="image-container">
+            <img src="{% static 'images/photo1.jpg' %}" alt="Person 2">
+        </div>
+        <div class="text-info block-info">
+            <p>Я вирішив обрати кар'єру в галузі IT через переконання в тому, що це майбутнє, де технології постійно розвиваються. Ще зі шкільних років я відчував зацікавленість до технічних спеціальностей, і вірю, що в цій галузі можна знайти безмежні можливості для кар'єрного зростання та самореалізації.</p>
+        </div>
+    </div>
+
+
+    <div class="person-info-container block-info">
+        <div class="image-container">
+            <img src="{% static 'images/photo2.jpg' %}" alt="Person 2">
+        </div>
+        <div class="text-info block-info">
+            <p>Я вибрала галузь IT, через те що цікавлюсь новими технологіями. Я паралельно вчусь на веб-дизайнера в університеті, тобто в напрямку frontend розробки. Я захотіла знати не тільки як працює сайт ззовні, але також як він працює зсередини, тому пішла на backend розробку.</p>
+        </div>
+    </div>
+
+    <div class="person-info-container block-info">
+        <div class="image-container">
+            <img src="{% static 'images/photo3.jpg' %}" alt="Person 3">
+        </div>
+        <div class="text-info">
+            <p>Я вирішив зробити кар'єру в it, а також пов'язати її з вивченням Python з простої причини - це дуже корисна мова програмування. Вона дуже популярна, легка для вивчення і використання, і відкриває багато можливостей для знаходження роботи та створення цікавих проектів.
+</p>
+        </div>
+    </div>
+
+    <div class="person-info-container block-info">
+        <div class="image-container">
+            <img src="{% static 'images/photo4.jpg' %}" alt="Person 4">
+        </div>
+        <div class="text-info">
+            <p>Для мене кар’єра в галузі IT це сфера діяльності в якій я вже давно прагнув розвиватися. Програмування на мові Python дало мені поштовх для отримання IT освіти і здобуття нових вершин. Програмування це процес від якого отримуєш максимум задоволення коли відбувається магія перетворення коду в необхідний продукт.</p>
+        </div>
+    </div>
+
+    <div class="person-info-container block-info">
+        <div class="image-container">
+            <img src="{% static 'images/photo5.jpg' %}" alt="Person 5">
+        </div>
+        <div class="text-info">
+            <p>Для мене робота в сфері IT - це не лише професія, це спосіб мислення, що став важливою частиною мого життя. Ще з дитинства я цікавився комп'ютерами та усією сферою технологій загалом, але коли я вперше створив свою програму на Python, відчув, що знайшов своє покликання. Відтоді кожен новий крок у світі IT - це  можливість займатися улюбленою справою.</p>
+        </div>
+    </div>
+</main>
+{% endblock %}

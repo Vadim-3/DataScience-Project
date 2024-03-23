@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "datascience-project"
+version = "0.1.0"
+description = ""
+authors = ["Vadim-3 <128088822+Vadim-3@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.0.3"
+torch = "^2.1.0"
+torchvision = ">=0.9.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

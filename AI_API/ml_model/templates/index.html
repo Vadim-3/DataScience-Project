@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+       <div class="block" style="background-color: #2e323c; border: none;"> <!-- Змінено фон і видалено обводку -->
+    <form action="." method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+    <label for="id_image" class="custom-file-upload">
+        <span id="file-name-placeholder">Виберіть файл</span> <!-- Початковий текст -->
+        <input type="file" id="id_image" name="image" accept="image/*" style="display: none;" onchange="updateFileName(this)"> <!-- Подія onchange спрацьовує при виборі файлу -->
+    </label>
+</div>
+
+
+        <div class="form-group">
+            <label for="id_class">Виберіть клас:</label>
+            <select class="form-control" id="id_class" name="image_class" required>
+                {% for value, label in image_class_choices %}
+                    <option value="{{ value }}">{{ label }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Завантажити</button>
+    </form>
+</div>
+
+        {% if latest_image %}
+        <div class="block mt-4" style="background-color: #2e323c; border: none;"> <!-- Змінено фон і видалено обводку -->
+            <div class="row">
+
+                <div class="col-md-6">
+                    <img src="{{ latest_image.image.url }}" alt="Uploaded Image" class="img-fluid">
+                </div>
+
+                <div class="col-md-6">
+                    <p><strong>Предбачений клас:</strong></p>
+                    <p>{{ latest_image.get_image_predicted_class_display }}</p>
+                    <p><strong>Справжній клас:</strong></p>
+                    <p>{{ latest_image.get_image_class_display }}</p>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
