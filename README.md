@@ -1,4 +1,4 @@
-# CatCaptures
+# NeoCat
 # Image Classification Project Using Convolutional Neural Networks
 
 In this project, a web service for image classification using convolutional neural networks (CNNs) has been implemented. The CIFAR-10 dataset was utilized for model training, containing 60,000 color images divided into 10 classes.
@@ -6,6 +6,9 @@ In this project, a web service for image classification using convolutional neur
 ## Usage of the VGG-16 Model
 
 The VGG-16 model is employed for image classification. This architecture comprises features and a classifier. Prior to training, images are processed using a sequence of transformations to prepare them for model training.
+
+![Loss and accuracy graphs](for_Readme/loss_and_accuracy.png)
+![The accuracy of the model was achieved at the level of 93.09%](for_Readme/model_result.png)
 
 ## Web Interface
 
